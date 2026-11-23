@@ -1,0 +1,59 @@
+[project]
+name = "devops-lab7"
+version = "0.1.0"
+description = "ЛР7: класичний ML (scikit-learn, Digits) та CV (OpenCV: детекція й розпізнавання облич), LSP"
+readme = "README.md"
+authors = [
+    { name = "Marko Vorok", email = "vorokmarko@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "opencv-contrib-python>=4.14,<5",
+    "scikit-learn>=1.9.1",
+]
+
+[project.scripts]
+devops-lab7 = "devops_lab7:main"
+lab7-prepare = "devops_lab7.prepare_data:main"
+lab7-digits = "devops_lab7.digits_task:main"
+lab7-detect = "devops_lab7.detect_photo:main"
+lab7-video = "devops_lab7.detect_video:main"
+lab7-recognize = "devops_lab7.recognize_photo:main"
+lab7-lsp = "devops_lab7.lsp_demo:main"
+
+[build-system]
+requires = ["uv_build>=0.11.0,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "UP", "B", "SIM", "RUF"]
+# RUF001-003: кирилиця в рядках/коментарях — не помилка
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+mypy_path = "src"
+explicit_package_bases = true
+exclude = ["^\\.venv/", "^build/", "^output/"]
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

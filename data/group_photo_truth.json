@@ -1,0 +1,112 @@
+[
+ {
+  "subject": 13,
+  "label": "s14",
+  "known": true,
+  "box": [
+   90,
+   125,
+   160,
+   160
+  ]
+ },
+ {
+  "subject": 7,
+  "label": "s08",
+  "known": true,
+  "box": [
+   340,
+   110,
+   160,
+   160
+  ]
+ },
+ {
+  "subject": 38,
+  "label": "s39",
+  "known": false,
+  "box": [
+   580,
+   120,
+   160,
+   160
+  ]
+ },
+ {
+  "subject": 26,
+  "label": "s27",
+  "known": true,
+  "box": [
+   810,
+   110,
+   160,
+   160
+  ]
+ },
+ {
+  "subject": 1,
+  "label": "s02",
+  "known": true,
+  "box": [
+   1040,
+   125,
+   160,
+   160
+  ]
+ },
+ {
+  "subject": 20,
+  "label": "s21",
+  "known": true,
+  "box": [
+   198,
+   378,
+   185,
+   185
+  ]
+ },
+ {
+  "subject": 9,
+  "label": "s10",
+  "known": true,
+  "box": [
+   453,
+   393,
+   185,
+   185
+  ]
+ },
+ {
+  "subject": 11,
+  "label": "s12",
+  "known": false,
+  "box": [
+   698,
+   378,
+   185,
+   185
+  ]
+ },
+ {
+  "subject": 34,
+  "label": "s35",
+  "known": true,
+  "box": [
+   938,
+   393,
+   185,
+   185
+  ]
+ },
+ {
+  "subject": 31,
+  "label": "s32",
+  "known": true,
+  "box": [
+   1109,
+   424,
+   153,
+   153
+  ]
+ }
+]
